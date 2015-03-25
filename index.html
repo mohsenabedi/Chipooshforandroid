@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>چیپوش</title>
+<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css">
+
+<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>چیپوش</h1>
+  <a href="#" data-role="button">Button</a>  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <div class="center"><img src="img/chipoosh-main.png" width="250" height="250" alt="chipoosh logo" longdesc="/img/chipoosh-main.png"/>
+      </div>
+      <li><a href="#website">تمامی مطالب</a></li>
+      <li><a href="#categories">دسته بندی ها</a></li>
+      <li><a href="#search">چی بپوشم؟</a></li>
+      <li><a href="#about">درباره ما</a></li>
+      <li><a href="#contact">تماس با ما</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- صفحه اصلی -->
+<div data-role="page" id="website" data-add-back-btn="true" data-back-btn-text="بازگشت">
+  <div data-role="header">
+    <h1>آخرین مطالب</h1>
+  </div>
+  <div data-role="content">
+  <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // external url
+        var ref = window.open(encodeURI('http://chipoosh.com/mobile-version/'), '_self', 'location=yes');
+        // relative document
+        ref = window.open('next.html', '_self');
+    }
+
+    </script>  
+  </div>
+</div>
+
+<!-- دسته بندی ها -->
+<div data-role="page" id="categories" data-add-back-btn="true" data-back-btn-text="بازگشت">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">Content</div>
+</div>
+
+
+<!-- چی بپوشم -->
+<div data-role="page" id="search" data-add-back-btn="true" data-back-btn-text="بازگشت">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">Content</div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

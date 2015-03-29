@@ -1,28 +1,37 @@
-<!doctype html>
+<!DOCTYPE html> 
 <html>
 <head>
 <meta charset="utf-8">
-<title>چیپوش</title>
-<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css">
+<title>جیپوش</title>
+<link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="swipbox/swipebox.min.css">
 
-<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
-<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+<script src="swipbox/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="swipbox/jquery.swipebox.min.js" type="text/javascript"></script>
+<script src="phonegap.js" type="text/javascript"></script>
 </head>
 
+
 <body>
+
+<div class="loading"></div>
+
 <div data-role="page" id="page">
   <div data-role="header">
     <h1>چیپوش</h1>
-  <a href="#" data-role="button">Button</a>  </div>
+ </div>
   <div data-role="content">
     <ul data-role="listview">
-      <div class="center"><img src="img/chipoosh-main.png" width="250" height="250" alt="chipoosh logo" longdesc="/img/chipoosh-main.png"/>
+      <div class="center"><img src="img/chipoosh-main.png" width="100" height="100" alt="chipoosh logo" longdesc="/img/chipoosh-main.png"/>
       </div>
-      <li><a href="#website">تمامی مطالب</a></li>
-      <li><a href="#categories">دسته بندی ها</a></li>
-      <li><a href="#search">چی بپوشم؟</a></li>
-      <li><a href="#about">درباره ما</a></li>
-      <li><a href="#contact">تماس با ما</a></li>
+      <li><a href="#website" data-transition="pop">تمامی مطالب (آنلاین)</a></li>
+      <li><a href="#categories" data-transition="pop">چیپوش تیپ</a></li>
+      <li><a href="#search" data-transition="pop">چی بپوشم؟</a></li>
+      <li><a href="#about" data-transition="pop">درباره ما</a></li>
+      <li><a href="#contact" data-transition="pop">تماس با ما</a></li>
     </ul>
   </div>
 </div>
@@ -30,35 +39,146 @@
 <!-- صفحه اصلی -->
 <div data-role="page" id="website" data-add-back-btn="true" data-back-btn-text="بازگشت">
   <div data-role="header">
-    <h1>آخرین مطالب</h1>
+    <h1>جدیدترین مطالب از سایت</h1>
   </div>
   <div data-role="content">
+  
+  
+  <div class="app js-app">
+    <!--Hidden menu-->
+
+
+    <div class="app-container js-app-container">
+
+    <div class="topcoat-navigation-bar">
+        <div class="topcoat-navigation-bar__item right quarter">
+            <a class="topcoat-icon-button--quiet">
+              <span class="topcoat-icon topcoat-icon--edit"></span>
+            </a>
+        </div>
+    </div>
+
+    <div id="container"></div>
+
+</div><!-- .app -->
+
+  
+    </head>
+    
+  
   <script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
+    
         // external url
-        var ref = window.open(encodeURI('http://chipoosh.com/mobile-version/'), '_self', 'location=yes');
+      // window.open(encodeURI('http://chipoosh.com/mobile-version/'), '_self');
         // relative document
-        ref = window.open('next.html', '_self');
-    }
+   
 
-    </script>  
+    </script>
+    
+    
+
   </div>
 </div>
+
+</div>
+
+
+
+
 
 <!-- دسته بندی ها -->
 <div data-role="page" id="categories" data-add-back-btn="true" data-back-btn-text="بازگشت">
   <div data-role="header">
-    <h1>Header</h1>
+    <h1>دسته ها</h1>
   </div>
-  <div data-role="content">Content</div>
+  <div data-role="content">
+   <ul data-role="listview">
+      <div class="center"><img src="img/chipoosh-main.png" width="100" height="100" alt="chipoosh logo" longdesc="/img/chipoosh-main.png"/>
+      </div>
+      <li><a href="#tip" data-transition="pop">چیپوش تیپ</a></li>
+    <!--  <li><a href="#mod" data-transition="pop">چیچوش مد</a></li>
+      <li><a href="#health" data-transition="pop">چیپوش سلامت</a></li>
+      <li><a href="#men" data-transition="pop">چیپوش آقایان</a></li>
+      <li><a href="#tricks" data-transition="pop">چیپوش آموزش و ترفند</a></li>
+      <li><a href="#tricks" data-transition="pop">پیشنهاد چیپوش</a></li> -->
+    </ul>
+  
+  </div>
 </div>
+
+
+
+<!-- TIP TIP TIP -->
+ 
+
+<div data-role="page" id="tip" data-add-back-btn="true" data-back-btn-text="بازگشت">
+  <div data-role="header">
+    <h1>چیپوش تیپ</h1>
+  	</div>
+  <div data-role="content">
+      
+    <a rel="gallery-1" href="img/bigtip/02 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/02 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+<a rel="gallery-1" href="img/bigtip/03 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/03 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+<a rel="gallery-1" href="img/bigtip/04 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/04 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+<a rel="gallery-1" href="img/bigtip/05 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/05 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+<a rel="gallery-1" href="img/bigtip/06 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/06 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+<a rel="gallery-1" href="img/bigtip/07 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/07 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+<a rel="gallery-1" href="img/bigtip/08 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/08 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+<a rel="gallery-1" href="img/bigtip/09 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/09 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+<a rel="gallery-1" href="img/bigtip/10 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/10 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+<a rel="gallery-1" href="img/bigtip/11 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/11 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+<a rel="gallery-1" href="img/bigtip/12 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/12 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+    <a rel="gallery-1" href="img/bigtip/13 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/13 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    <a rel="gallery-1" href="img/bigtip/14 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/14 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    <a rel="gallery-1" href="img/bigtip/15 chipooshtip mode fashion chipooh.jpg" class="swipebox">
+	<img src="img/smalltip/15 chipooshtip mode fashion chipooh.jpg" alt="image">
+	</a>
+    
+    
+    
+  </div>
+</div>
+
+
+
 
 
 <!-- چی بپوشم -->
@@ -71,9 +191,91 @@
 
 
 
+<div data-role="page" id="about" data-add-back-btn="true" data-back-btn-text="بازگشت">
+  <div data-role="header">
+    <h1>درباره ما</h1>
+  </div>
+  <div data-role="content">
+  <h2>چیپوش چیست</h2>
+  <p>چیپوش یک وبسایت با هدف اصلاح روش پوشش در ایران است. این سرویس با توجه به فاکتورهای مذهبی و عرفی ایران سعی در این دارد که به خانم ها و اقایان ایرانی آموزش دهد که چگونه می توان فارغ از تبلیغات لاغری و چاقی و قرص و عمل جراحی و ... و با روشی آسان، با کمی دانش درباره مسئله زیبایی، چگونه زیباتر و زیباتر شد و نکته اینجاست که این مسئله نه نیاز به هزینه دارد و نه نیاز به وقت زیاد. شما فقط باید کمی بیشتر بدانید</p>
+  <br>
+<h2>اهداف</h2>
+  <p>هدف اصلی ما ارتقاء فرهنگ پوشش اسلامی و ایرانیست. ما در طی این سال ها متاسفانه فقط دنباله روی پوشش غربی بوده ایم اما توجه به این نکته را فراموش کرده ایم که از دوران باستان تا کنون ایرانیان بوده اند که از اولین تمدن هایی بودند که به شیک پوشی اهمیت می داده اند. هدف بالای چیپوش آسان کردن کار شمایی است که به ظاهر خودتان اهمیت می دهید. ما سعی می کنیم بهترین مطالب، مقالات و محصولات را برای شما آماده کنیم تا شاید سهمی در ارتقاء دانش پوشش در این مرز و بوم داشته باشیم.</p><br>
+<h2>چشم انداز چیپوش</h2><p> زمانی است که زنان و مردان جامعه ما با دانش، و نه با دنباله روی، لباس های خود را انتخاب کنند. ما به تمام سلایق احترام میگذاریم و به نظر ما هرکسی می تواند در راستای فرهنگ ایرانی و اسلامی جامعه ایران بهترین ها را انتخاب کند و بپوشد و زیباتر باشد. و این موضوع هیچ دخلی به زمان و موقعیت و صورت و هیکل نداشته و تمام افراد می توانند با استفاده از روش های درست و سالم در راستای اعتلای پوشش فردی و جامعه ایران قدم بردارند.</p>
+  
+  </div>
+</div>
+
+
+<div data-role="page" id="contact" data-add-back-btn="true" data-back-btn-text="بازگشت">
+  <div data-role="header">
+    <h1>تماس با ما</h1>
+  </div>
+  <div data-role="content">
+  <h2>وبسایت چیپوش</h2>
+  <p>برای تماس با ما اولین و بهترین منبع وبسایت ماست<br>
+به وبسایت چیپوش حتما سر بزنید<br>
+Chipoosh.com
+</p>
+  
+  <h3>برای گزارش اشکالات نرم افزار به سایت</h3>
+  <p>admin@chipoosh.com</p>
+  
+  <h3>برای طرح سوالات خود درباره مد و زیبایی</h3>
+  <p>در سایت چیپوش دات کام به بخش تماس با ما مراجعه کنید و از طریق فرم تماس برای ما پیام بزنید. ما در اسرع وقت پاسخگوی شما هستیم و البته می توانید از طریق سیستم کامنت هم برای ما پیام بفرستید</p>
+  
+  
+  
+  </div>
+</div>
 
 
 
+
+
+
+
+<script type="text/javascript">
+;( function( $ ) {
+
+	$( '.swipebox' ).swipebox();
+
+} )( jQuery );
+
+
+$(document).ready(function(e) {
+    $('.loading').hide();
+});
+
+
+$.ajax({
+    //your ajax options
+    error: function (request) { 
+         if (request.status == 0) {
+            navigator.notification.alert(
+    	'شما به اینترنت متصل نیستید و نمی توانید از آخرین مطالب آنلاین استفاده کنید. لطفا به اینترنت وصل شوید و امتحان کنید!',  // message
+    alertDismissed,         // callback
+    'عدم اتصال به اینترنت',            // title
+    'خب'                  // buttonName
+);
+        }
+    }
+});
+
+</script>
+    <!-- When in Phonegap folder uncomment this
+    <script type="text/javascript" src="phonegap.js"></script>  -->
+    <script type="text/javascript" src="appjs/jquery.js"></script>
+    <script type="text/javascript" src="appjs/fastclick.js"></script>
+    <script type="text/javascript" src="appjs/pageslider.js"></script>
+    <script type="text/javascript" src="appjs/app.js"></script>
+<script src="jquery-mobile/jquery.lazyload.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+    $("img").lazyload();
+});
+
+</script>
 
 
 </body>

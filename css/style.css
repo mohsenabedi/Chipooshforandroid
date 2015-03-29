@@ -1,9 +1,96 @@
 @charset "utf-8";
 /* CSS Document */
+@font-face {
+	font-family: 'Yekan';
+	src: url('../fonts/yekan.eot?#') format('eot'),  
+	url('../fonts/yekan.woff') format('woff'),  
+	url('../fonts/yekan.ttf') format('truetype'), 
+	url('../fonts/yekan.svg') format('svg');  
+}
+
+body,h1,h2,p,ul,li{ 
+	font-family:yekan,tahoma;
+	direction:rtl;
+	text-align:right;
+}
 
 ul img{
 	text-align:center;
-	alignment-adjust:central;
 	
 	
+	max-width: 250px;
+	margin: auto auto;
 }
+
+.center {
+    width: 100px;
+    margin: auto auto;
+}
+
+.swipebox img {
+    height: 200px;
+    border: 2px solid rgb(74, 74, 74) !important;
+}
+ul.topcoat-list {
+  direction: rtl;
+  text-align: right;
+  padding: 0;
+}
+
+div#container {
+    font-family: Yekan,tahoma;
+}
+
+p {
+    font-family: yekan,tahoma,inherit;
+    font-size: 12px;
+}
+h3 {
+    font-size: 15px;
+}
+li {
+    list-style: none;
+    list-style-position:;
+}
+li.topcoat-list__item {
+    background: rgb(216, 216, 216);
+    padding: 2%;
+    margin: 30px 0px;
+}
+.wpb_wrapper {
+    text-align: center;
+}
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+@-webkit-keyframes rotateY {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to { 
+    -webkit-transform: rotateY(360deg);
+  }
+}
+.center img
+{
+    -webkit-animation-name:             rotateY; 
+    -webkit-animation-duration:         15s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-transition-timing-function: linear;
+    }
+	
+	
+	
+	.loading {
+    background: rgba(44, 44, 44, 0.51) url('../img/ajax-loader.gif') center no-repeat;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+	display:asdasd;
+	}
